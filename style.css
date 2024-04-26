@@ -1,0 +1,43 @@
+.body {
+    margin: 0;
+    padding: 20px;
+}
+
+.figtree-font {
+    font-family: "Figtree", sans-serif;
+}
+
+#country-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country-card {
+    display: flex;
+    flex: 1 1 350px; /* Flexible sizing for each card */
+    margin: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.card-info p {
+    margin: 5px 0; /* Adjust margin for paragraph elements */
+}
+
+
+.country-name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.country-flag{
+    height: 80px;
+    margin-right: 20px;
+}
+
