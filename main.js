@@ -20,6 +20,7 @@ const countriesData = (async () => {
 })();
 
 countriesData.then((data) => {
+  console.log(data.length);
   const countryContainer = document.getElementById("country-container");
 
   data.forEach((country, index) => {
@@ -27,6 +28,12 @@ countriesData.then((data) => {
     const countryCard = document.createElement("div");
     countryCard.id = `country-card-${index}`;
     countryCard.classList.add("country-card");
+
+    const countryFlag = document.createElement("img");
+    countryFlag.classList.add("country-flag");
+    countryFlag.src = country.flags.png;
+    countryFlag.alt = country.name.common;
+    countryCard.appendChild(countryFlag);
 
     // Create card info element
     const cardInfo = document.createElement("div");
@@ -47,18 +54,27 @@ countriesData.then((data) => {
     // currency
     let currency = document.createElement("p");
     currency.classList.add("country-currency");
-    let currencyList = Object.keys(country.currencies);
-    let currencyNames = currencyList.map(
-      (currency) => country.currencies[currency].name
-    );
-    currency.textContent = `Currencies: ${currencyNames.join(", ")}`;
+    if (country.currencies) {
+      // Check if currencies are defined
+      let currencyList = Object.keys(country.currencies);
+      let currencyNames = currencyList.map(
+        (currency) => country.currencies[currency].name
+      );
+      currency.textContent = `Currencies: ${currencyNames.join(", ")}`;
+    } else {
+      currency.textContent = "Currencies: Not available";
+    }
     cardInfo.appendChild(currency);
 
     // languages
     let language = document.createElement("p");
     language.classList.add("country-language");
-    let languageList = Object.values(country.languages);
-    language.textContent = `Languages: ${languageList.join(", ")}`;
+    if (country.languages) {
+      let languageList = Object.values(country.languages);
+      language.textContent = `Languages: ${languageList.join(", ")}`;
+    } else {
+      language.textContent = "Language: Not available";
+    }
     cardInfo.appendChild(language);
 
     // population
