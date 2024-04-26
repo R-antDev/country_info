@@ -1,43 +1,82 @@
 .body {
-    margin: 0;
-    padding: 20px;
+  margin: 0;
+  padding: 20px;
+  background-color: lavender;
 }
 
 .figtree-font {
-    font-family: "Figtree", sans-serif;
+  font-family: "Figtree", sans-serif;
+}
+
+.country-info-header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.country-icon {
+  margin-right: 5px;
 }
 
 #country-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .country-card {
-    display: flex;
-    flex: 1 1 350px; /* Flexible sizing for each card */
-    margin: 10px;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid gray;
-    border-radius: 12px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: aliceblue;
+  display: flex;
+  flex: 1 1 350px; /* Flexible sizing for each card */
+  margin: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: aliceblue;
 }
 
 .card-info p {
-    margin: 5px 0; /* Adjust margin for paragraph elements */
+  margin: 5px 0; /* Adjust margin for paragraph elements */
 }
 
+.country-name {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-.country-name{
-    font-size: 18px;
+.country-flag {
+  height: 80px;
+  margin-right: 20px;
+}
+/* Dropdown container */
+.sort-by {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
     font-weight: bold;
 }
 
-
-.country-flag{
-    height: 80px;
-    margin-right: 20px;
+/* Dropdown label */
+.sort-by label {
+    margin-right: 10px;
 }
 
+/* Dropdown select */
+#drop-down {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 16px;
+    appearance: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Hover effect on dropdown */
+#drop-down:hover {
+    border-color: #999;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body class="body figtree-font">
-    <div id="country-container">
-        
-    </div>
+
+    <header class="country-info-header">
+        <h1 style="color: darkblue;"> <i class="country-icon fa-solid fa-book-atlas"></i> Countries Information </h1>
+    </header>
+
+    <nav class="country-info-nav">
+        <div class="sort-by">
+            <label for="drop-down" style="border-bottom: 1px solid black;">Sort Countries by: </label>
+            <select id="drop-down">
+                <option>-- Select --</option>
+                <option value="name" class="option">Name</option>
+                <option value="population" class="option">Population</option>
+                <option value="area" class="option">Area</option>
+            </select>
+        </div>
+    </nav>
+
+    <div id="country-container"></div>
+    <script src="https://kit.fontawesome.com/59539ec33f.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
