@@ -6,8 +6,10 @@
 
 .body {
   margin: 0;
-  padding: 20px;
-  background-color: lavender;
+  padding: 40px;
+  background-image: url('img/map_image.png');
+  background-size: auto;
+  
 }
 
 .figtree-font {
@@ -15,7 +17,7 @@
 }
 
 .country-info-header {
-  height: 50px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +42,7 @@
   border-radius: 12px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .card-info p {
@@ -58,12 +60,12 @@
 }
 /* Dropdown container */
 .sort-by {
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Dropdown label */
