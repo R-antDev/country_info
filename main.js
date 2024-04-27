@@ -122,32 +122,31 @@ const renderCountriesData = (data) => {
 
 // Function to initially render all country data
 const renderAllCountriesData = (data) => {
-    renderCountriesData(data); // Assuming renderCountriesData function exists
+  renderCountriesData(data); // Assuming renderCountriesData function exists
 };
 
 // Event listener for dropdown change
 const dropDown = document.getElementById("drop-down");
 dropDown.addEventListener("change", async (event) => {
-    const selectedValue = event.target.value;
-    // Fetch countries data
-    try {
-        const data = await countriesData;
-        // Sort data according to selected value
-        const sortedData = sortCountriesData(data, selectedValue);
-        // Render sorted data
-        renderCountriesData(sortedData);
-    } catch (error) {
-        console.error(error);
-    }
+  const selectedValue = event.target.value;
+  // Fetch countries data
+  try {
+    const data = await countriesData;
+    // Sort data according to selected value
+    const sortedData = sortCountriesData(data, selectedValue);
+    // Render sorted data
+    renderCountriesData(sortedData);
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 // Fetch countries data and render all countries data when the page loads
-window.addEventListener('load', async () => {
-    try {
-        const data = await countriesData;
-        renderAllCountriesData(data);
-    } catch (error) {
-        console.error(error);
-    }
+window.addEventListener("load", async () => {
+  try {
+    const data = await countriesData;
+    renderAllCountriesData(data);
+  } catch (error) {
+    console.error(error);
+  }
 });
-
