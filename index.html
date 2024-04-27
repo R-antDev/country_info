@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country Info</title>
+    <title>Countries Info!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +15,25 @@
 <body class="body figtree-font">
 
     <header class="country-info-header">
-        <h1 style="color: darkblue;"> <i class="country-icon fa-solid fa-book-atlas"></i> Countries Information </h1>
+        <h1 style="color: darkblue;"> <i class="country-icon fa-solid fa-book-atlas"></i> Countries Info! </h1>
     </header>
 
     <nav class="country-info-nav">
         <div class="sort-by">
             <label for="drop-down" style="border-bottom: 1px solid black;">Sort Countries by: </label>
-            <select id="drop-down">
-                <option>-- Select --</option>
-                <option value="name" class="option">Name</option>
-                <option value="population" class="option">Population</option>
-                <option value="area" class="option">Area</option>
+            <select id="drop-down" class="drop-down">
+                <option>- Select an option -</option>
+                <option value="name-asce" >Name - ascending</option>
+                <hr>
+                <option value="name-dsce" >Name - descending</option>
+                <hr>
+                <option value="population-h" >Population - highest</option>
+                <hr>
+                <option value="population-l" ">Population - lowest</option>
+                <hr>
+                <option value="area-h" >Area - highest</option>
+                <hr>
+                <option value="area-l" >Area - lowest</option>
             </select>
         </div>
     </nav>

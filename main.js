@@ -22,12 +22,18 @@ const countriesData = (async () => {
 // Function to sort countries data
 const sortCountriesData = (data, sortBy) => {
   switch (sortBy) {
-    case "name":
+    case "name-asce":
       return data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-    case "population":
+    case "name-dsce":
+      return data.sort((a, b) => b.name.common.localeCompare(a.name.common));
+    case "population-h":
       return data.sort((a, b) => b.population - a.population);
-    case "area":
+    case "population-l":
+      return data.sort((a, b) => a.population - b.population);
+    case "area-h":
       return data.sort((a, b) => b.area - a.area);
+    case "area-l":
+      return data.sort((a, b) => a.area - b.area);
     default:
       return data;
   }
