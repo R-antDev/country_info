@@ -9,7 +9,7 @@
   padding: 40px;
   background-image: url('img/map_image.png');
   background-size: auto;
-  
+
 }
 
 .figtree-font {
@@ -23,6 +23,7 @@
   align-items: center;
   text-align: center;
 }
+
 .country-icon {
   margin-right: 5px;
 }
@@ -34,7 +35,8 @@
 
 .country-card {
   display: flex;
-  flex: 1 1 350px; /* Flexible sizing for each card */
+  flex: 1 1 350px;
+  /* Flexible sizing for each card */
   margin: 10px;
   justify-content: space-evenly;
   align-items: center;
@@ -46,7 +48,7 @@
 }
 
 .card-info p {
-  margin: 5px 0; /* Adjust margin for paragraph elements */
+  margin: 5px 0;
 }
 
 .country-name {
@@ -58,6 +60,7 @@
   height: 80px;
   margin-right: 20px;
 }
+
 /* Dropdown container */
 .sort-by {
   height: 100px;
@@ -93,4 +96,40 @@
 .drop-down option {
   font-size: 18px;
   font-family: "Figtree", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    padding: 16px;
+  }
+
+  .sort-by {
+    font-size: 14px;
+  }
+
+  .drop-down {
+    font-size: 14px;
+  }
+
+  .drop-down option {
+    font-size: 14px;
+  }
+
+  .country-flag {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .country-card {
+    display: flex;
+    flex: 1 1 350px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .country-info-header {
+    height: 50px;
+  }
+
+
 }
